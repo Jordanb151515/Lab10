@@ -9,12 +9,11 @@
  */
 public class Employee extends Person
 {
-    // instance variables - replace the example below with your own
     private int hireYear;
     private String idNum;
 
     /**
-     * Constructor for objects of class Employee
+     * No-args Constructor for objects of class Employee. Calls the super class constructor.
      */
     public Employee()
     {
@@ -24,7 +23,8 @@ public class Employee extends Person
     }
 
     /**
-     * Constructor for objects of class Employee
+     * Constructor for objects of class Employee. Sets year hired and ID number and
+     * calls the superclass constructor.
      */
     public Employee(String name, int hireYear, String idNum)
     {
@@ -34,10 +34,10 @@ public class Employee extends Person
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Method tests to see if two objects are equal.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  o  is the object being tested to the object calling the method
+     * @return  boolean isEqual for if condition was true or false
      */
     public boolean equals (Object o){
         boolean isEqual = false;
@@ -51,10 +51,9 @@ public class Employee extends Person
 
     
     /**
-     * An example of a method - replace this comment with your own
+     * Method is a getter for the years in service.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return    the current year minus the year hired
      */
     public int getServiceYears()
     {
@@ -110,9 +109,9 @@ public class Employee extends Person
     public String toString()
     {
         String str = super.toString() + 
-                     String.format("\nID Number: ", idNum) +
-                     String.format("\nYear Hired: ", hireYear) +
-                     String.format("\tYears of Service: ", getServiceYears());
+                     String.format("\nID Number: %s", idNum) +
+                     String.format("\nYear Hired: %d", hireYear) +
+                     String.format("\tYears of Service: %d", getServiceYears());
         return str;
     }
 }

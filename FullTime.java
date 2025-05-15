@@ -1,27 +1,39 @@
 
 /**
- * Write a description of class FullTime here.
+ * FullTime class holds the salary for fulltime employees. Extends the employee and person
+ * classes.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Jordan Byrne
+ * @version v1.0
+ * @since 5/15/25
  */
 public class FullTime extends Employee
 {
     private double salary;
 
     /**
-     * Constructor for objects of class FullTime
+     * Constructor for objects of class FullTime. Sets the salary and also calls the super
+     * constructor.
      */
-    public FullTime()
+    public FullTime(String name, int year, String idNum, double salary)
     {
-        
+        super(name, year, idNum);
+        this.salary = salary;
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * No-args Constructor for objects of class FullTime. Sets salary to 0.
+     */
+    public FullTime()
+    {
+        super();
+        salary = 0.0;
+    }
+    
+    /**
+     * Method is a setter for salary.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  salary   the inputted salary of the employee
      */
     public void setSalary(double salary)
     {
@@ -29,10 +41,9 @@ public class FullTime extends Employee
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Method is a getter for salary.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return   the salary field
      */
     public double getSalary()
     {
@@ -40,10 +51,9 @@ public class FullTime extends Employee
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * Method is a toString for the FullTime class. Displays information about the object.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return  str   the employee's information string
      */
     public String toString()
     {

@@ -55,7 +55,7 @@ public class Person
      */
     public String toString()
     {
-        String str = String.format("Name: ", name); 
+        String str = String.format("Name: %s", name); 
         return str;
     }
 }

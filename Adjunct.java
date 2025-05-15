@@ -1,46 +1,58 @@
 
 /**
- * Write a description of class Adjunct here.
+ * Adjunct classes holds information about hours and hourly rate for part time employees.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Jordan Byrne
+ * @version v1.0
+ * @since 5/15/25
  */
 public class Adjunct extends Employee
 {
-    // instance variables - replace the example below with your own
     private double hours, hrRate;
 
     /**
-     * Constructor for objects of class Adjunct
+     * No-args Constructor for objects of class Adjunct. Sets fields to 0.
      */
     public Adjunct()
     {
-        
+        super();
+        hours = 0.0;
+        hrRate = 0.0;
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Constructor for objects of class Adjunct. Sets hours and rate and calls the super
+     * class constructor.
+     */
+    public Adjunct(String name, int year, String idNum, double hours, double hrRate)
+    {
+        super(name, year, idNum);
+        this.hours = hours;
+        this.hrRate = hrRate;
+    }
+
+    /**
+     * Method is a getter for the salary of the employee.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return    the hours times the hourly rate
      */
     public double getSalary()
     {
         return (hours*hrRate);
     }
-    
+
     /**
-     * An example of a method - replace this comment with your own
+     * This method is a toString for the Adjunct class. Displays information about
+     * the hours, hourly rate, and salary of the employee.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return   str   the employee's information string
      */
     public String toString()
     {
         String str = super.toString() +
-                     String.format("\nHours: ",hours) +
-                     String.format("\tHourly Rate: ", hrRate) +
-                     String.format("\tSalary: $%,.2f", getSalary());
+            String.format("\nHours: %.2f",hours) +
+            String.format("\tHourly Rate: %.2f", hrRate) +
+            String.format("\tSalary: $%,.2f", getSalary());
         return str;
     }
 }

@@ -25,6 +25,10 @@ public class Employee extends Person
     /**
      * Constructor for objects of class Employee. Sets year hired and ID number and
      * calls the superclass constructor.
+     * 
+     * @param  name    inputted name of employee
+     * @param  hireYear    inputted year the employee was hired
+     * @param  idNum    inputted ID number of the employee
      */
     public Employee(String name, int hireYear, String idNum)
     {

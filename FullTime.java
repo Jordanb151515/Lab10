@@ -14,6 +14,11 @@ public class FullTime extends Employee
     /**
      * Constructor for objects of class FullTime. Sets the salary and also calls the super
      * constructor.
+     * 
+     * @param  name  inputted name of the employee
+     * @param  year  inputted start year of the employee
+     * @param  idNum  inputted ID number of the employee
+     * @param  salary  inputted annual salary of the employee
      */
     public FullTime(String name, int year, String idNum, double salary)
     {

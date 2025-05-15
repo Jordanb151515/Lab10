@@ -22,6 +22,8 @@ public class Person
     /**
      * Constructor for objects of class Person that takes the parameter of the 
      * name of the person.
+     * 
+     * @param  name  inputted name of the person
      */
     public Person(String name)
     {

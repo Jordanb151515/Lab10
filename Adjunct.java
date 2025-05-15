@@ -23,6 +23,12 @@ public class Adjunct extends Employee
     /**
      * Constructor for objects of class Adjunct. Sets hours and rate and calls the super
      * class constructor.
+     * 
+     * @param  name   inputted name of the employee
+     * @param  year   inputted start year of the employee
+     * @param  idNum  inputted ID number of the employee
+     * @param  hours  inputted total amount of hours the employee worked
+     * @param  hrRate inputted rate of how much the employee makes per hour
      */
     public Adjunct(String name, int year, String idNum, double hours, double hrRate)
     {
